@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<title>Video</title>
+	<meta charset = "utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, target-densitydpi=device-dpi, initial-scale=1"> <!-- настраиваем ширину viewport так, чтобы она совпадала с шириной экрана смартфона, но также и отключаем разницу между CSS-пикселем и аппаратным пикселем-->
+	<meta name="HandheldFriendly" content="True"/> <!--отключение автоматического изменения масштаба страницы на смартфоне-->
+	<!--тобы мобильные браузеры не пытались обнаружить на веб-странице телефоны и адреса и соответственно не предлагали функционал для работы с ними:-->
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="address=no"/>
+	<!-- saved from url=(0014)about:internet -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/style_common.css" rel="stylesheet" />
+  	<link href="css/style_content.css" rel="stylesheet" />
+
+	<style>
+	  @-moz-document url-prefix()
+		{
+			.my-info p{
+				padding-top:45px;
+
+			}	
+
+			.container{
+				width:95%;
+			}
+		}
+	 </style>	
+</head>
+<body>
+<nav id="slide-menu">
+    <ul>
+        <li><a href="index.html" title="Home">HOME</a></li>
+        <li><a href="about.html" title="About">ABOUT</a></li>
+            <li>
+                <a href="2D.html#2d" title="Portfolio">PORTFOLIO</a>
+            </li>
+        <li><a href="contact.html" title="Contact">CONTACT</a></li>
+    </ul>
+</nav>
+<div class="wrapper" id="content">
+	<header class="fixed">
+        <div class="container clearfix">
+        	<div class="menu-trigger"><img src="img/menu.png" alt="Menu"><span>MENU</span></div>
+        	<a class="logo-size" href="index.html" title="Main Page">Nastyrtia</a>
+            <nav class="clearfix">
+                <ul class="menu">
+					<li><a href="index.html" title="Home">HOME</a></li>
+					<li><a href="about.html" title="About">ABOUT</a></li>
+					<li>
+						<a href="2D.html#2d" title="Portfolio">PORTFOLIO</a>
+						<ul class="sub-menu">
+							<li><a href="2D.html#2d" title="2D">2D</a></li>
+						    <li><a href="3D.html#3d" title="3D">3D</a></li>
+							<li><a href="drawings.html#drawing" title="Drawings">Drawings</a></li>
+							<li><a href="video.html#video" title="Video">Video</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html" title="Contact">CONTACT</a></li>
+                </ul>
+            </nav>
+         </div>
+    </header>
+
+    <section>
+        <div class="title">
+            <div class="container">
+                <h1>Welcome to Portfolio</h1>
+                <p class="logo-text-size">I'm Anastasia, professional designer and painter</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-gallery" id="video">
+        	<div class="container box">
+					<div class="line-title">
+             			<h2 class="name-title">MY PORTFOLIO</h2>
+					</div>
+          			<div class="portfolio-links">
+						<a href="2D.html#2d" title="2D images">2D</a>
+						<a href="3D.html#3d" title="3D images">3D</a>
+						<a href="drawings.html#drawing" title="Drawings">Drawings</a>
+						<a href="#video" title="Video">Video</a>
+					</div>
+       		 </div>
+
+       		 <div class="video-items">
+	       		 <iframe width="560" height="315" src="https://www.youtube.com/embed/15oNDbeZJtQ" allowfullscreen></iframe>
+
+	       		 <iframe width="560" height="315" src="https://www.youtube.com/embed/Aj92gCCRmYQ" allowfullscreen></iframe>
+
+	       		 <iframe width="560" height="315" src="https://www.youtube.com/embed/9kJIUhedv_0" allowfullscreen></iframe>
+
+	       		 <iframe width="560" height="315" src="https://www.youtube.com/embed/JxJJiC4z7yY" allowfullscreen></iframe>
+
+	       		 <iframe width="560" height="315" src="https://www.youtube.com/embed/KMdGY1EL03Y" allowfullscreen></iframe>
+       		</div>
+     </section>
+     <footer>
+        <div class="container box">
+            <div class="links clearfix">
+                <a class="icon-facebook hover" href="" title="Facebook"></a>
+                <a class="icon-vk hover" href="" title="Vkontakte"></a>
+                <a class="icon-twitter hover" href="" title="Twitter"></a>
+                <a class="icon-google-plus hover" href="" title="Google+"></a>
+            </div>
+            <p>&copy; 2015 Copyright &ndash; All rights reserved</p>
+        </div>
+    </footer>
+</div>
+
+<div id="hellopreloader">
+	<div id="hellopreloader_preload"></div>
+</div>
+
+<script src="js/preloader.js"></script>
+<script src="js/mobile-menu.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</body>
+</html>
