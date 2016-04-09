@@ -4,7 +4,7 @@ nav#slide-menu {
 	top: -100%;
 	right: 0;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	background: #fff url('../img/snow.png');
 	-webkit-transition: top 400ms ease-in;
 	transition: top 400ms ease-in;
@@ -88,11 +88,11 @@ div.menu-trigger:hover {
 	cursor: pointer;
 }
 
-/*body.menu-active nav#slide-menu { right: -100%; }
+body.menu-active nav#slide-menu { right: -100%; }
 body.menu-active nav#slide-menu ul { right: 0px; opacity: 1; }
 
 body.menu-active div#content { right: 40%; border-radius: 7px 0 0 7px; }
-body.menu-active div#content .menu-trigger { right: 1%; }*/
+body.menu-active div#content .menu-trigger { right: 1%; }
 
 /*оформление скрытого меню*/
 #slide-menu {
@@ -1371,7 +1371,6 @@ a.btn:active,
 nav#slide-menu {
 	display: block;
 	width: 100%;
-	height: 100%;
 }
 
 div.menu-trigger {
@@ -1797,6 +1796,26 @@ body .container {
 	margin-top: 0px;
 }
 
+.contacts form input,
+.contacts textarea {
+	padding: 14px 0;
+	font-size: 1em;
+}
+
+.contacts .name-wrapper,
+.contacts .mail-wrapper {
+	border: 2px solid #193667;
+}
+
+.textarea-wrapper {
+    border: 2px solid #193667;
+    padding: 14px 15px;
+}
+
+.contacts.first-form .container {
+	width: 90%;
+}
+
 
 }
 
@@ -1830,7 +1849,6 @@ div.menu-trigger span {
 
 nav#slide-menu {
 	width: 100%;
-	height: 100%;
 }
 
 .name-title {
@@ -2069,11 +2087,26 @@ section div.container > p {
 /*формы*/
 .contacts form input,
 .contacts textarea {
-	font-size: 18px;
+	padding: 14px 0;
+	font-size: 1em;
 }
 
 .contacts textarea {
-	height: 200px;
+	height: 160px;
+}
+
+.contacts .name-wrapper,
+.contacts .mail-wrapper {
+	border: 2px solid #193667;
+}
+
+.textarea-wrapper {
+    border: 2px solid #193667;
+    padding: 14px 15px;
+}
+
+.contacts.first-form .container {
+	width: 90%;
 }
 
 /*страница с контактами*/
@@ -2215,6 +2248,30 @@ a.logo-size {
 
 #slide-menu li:first-child {
 	margin-bottom: 25px;
+}
+
+.contacts form input,
+.contacts textarea {
+	padding: 14px 0;
+	font-size: 1em;
+}
+
+.contacts .name-wrapper,
+.contacts .mail-wrapper {
+	border: 2px solid #193667;
+}
+
+.contacts textarea {
+	height: 160px;
+}
+
+.textarea-wrapper {
+    border: 2px solid #193667;
+    padding: 14px 15px;
+}
+
+.contacts.first-form .container {
+	width: 90%;
 }
 
 }
