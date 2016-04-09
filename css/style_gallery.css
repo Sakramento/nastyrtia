@@ -71,7 +71,7 @@
 
 #fullsized_go_prev {
   left: 0;
-  background: url('jquery-fullsizable.png');
+  background: url('../img/jquery-fullsizable.png');
 }
 
 #fullsized_go_prev:hover {
@@ -80,7 +80,7 @@
 
 #fullsized_go_next {
   right: 0;
-  background: url('jquery-fullsizable.png') -32px 0;
+  background: url('../img/jquery-fullsizable.png') -32px 0;
 }
 
 #fullsized_go_next:hover {
@@ -97,7 +97,7 @@
 
 #fullsized_close {
   right: 0;
-  background: url('jquery-fullsizable.png') -64px 0;
+  background: url('../img/jquery-fullsizable.png') -64px 0;
 }
 
 #fullsized_close:hover {
@@ -106,7 +106,7 @@
 
 #fullsized_fullscreen {
   right: 40px;
-  background: url('jquery-fullsizable.png') -96px 0;
+  background: url('../img/jquery-fullsizable.png') -96px 0;
 }
 
 #fullsized_fullscreen:hover {
