@@ -14,6 +14,9 @@
     <link href="css/style_portfolio.css" rel="stylesheet" >
     <link href="css/style_content.css" rel="stylesheet" >
 
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/fixed-menu.js"></script>
+
     <style>
     @-moz-document url-prefix()
     {
@@ -25,42 +28,67 @@
 </head>
 <body>
 <nav id="slide-menu">
+<div>
     <ul>
-        <li><a href="index.html" title="Home">HOME</a></li>
-        <li><a href="about.html" title="About">ABOUT</a></li>
-            <li>
-                <a href="2D.html#2d" title="Portfolio">PORTFOLIO</a>
-            </li>
-        <li><a href="contact.html" title="Contact">CONTACT</a></li>
+        <li class="icon-close">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="30px" height="30px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+            <style>
+                #close-svg {
+                    fill: #193667;
+                }
+            </style>
+            <polygon id="close-svg" points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397 
+                306,341.411 576.521,611.397 612,575.997 341.459,306.011             "/>
+            </svg>
+        </li>
+        <li>
+            <a href="index.html" title="Home"><span class="number">01</span><span>HOME</span></a>
+        </li>
+        <li>
+            <a href="about.html" title="About"><span class="number">02</span><span>ABOUT</span></a>
+        </li>
+        <li>
+            <a href="2D.html#2d" title="Portfolio"><span class="number">03</span><span>PORTFOLIO</span></a>
+        </li>
+        <li>
+            <a href="contact.html" title="Contact"><span class="number">04</span><span>CONTACTS</span></a>
+        </li>
     </ul>
+</div>
 </nav>
-<div class="wrapper" id="content">
-    
-    <header class="fixed">
-        <div class="container clearfix">
-            <div class="menu-trigger"><img src="img/menu.png" alt="Menu"><span>MENU</span></div>
-            <a  class="logo-size" href="index.html" title="Main Page">Nastyrtia</a>
+<div class="wrapper">
+    <header class="main-header">
+        <div class="container">
+            <div class="menu-trigger">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="42px" height="30px" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve">
+                <style>
+                    #menu-trigger {
+                        fill: #193667;
+                        -moz-transition: fill 0.3s ease;
+                        -o-transition: fill 0.3s ease;
+                        -webkit-transition: fill 0.3s ease;
+                        transition: fill 0.3s ease;
+                    }
+                </style>
+                <path id="menu-trigger" d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/>
+                </svg>
+            </div>
+            <p class="logo-size" href="index.html" title="Main Page">Nastyrtia</p>
             <nav class="clearfix">
                 <ul class="menu clearfix">
                     <li><a href="index.html" title="Home">HOME</a></li>
                     <li><a href="about.html" title="About">ABOUT</a></li>
-                    <li>
-						<a href="2D.html#2d" title="Portfolio">PORTFOLIO</a>
-						<ul class="sub-menu">
-							<li><a href="2D.html#2d" title="2D">2D</a></li>
-							<li><a href="3D.html#3d" title="3D">3D</a></li>
-							<li><a href="drawings.html#drawing" title="Drawings">Drawings</a></li>
-							<li><a href="video.html#video" title="Video">Video</a></li>
-						</ul>
-					</li>
-                    <li><a href="contact.html" title="Contact">CONTACT</a></li>
+                    <li><a href="2D.html#2d" title="Portfolio">PORTFOLIO</a></li>
+                    <li><a href="contact.html" title="Contact">CONTACTS</a></li>
                 </ul>
             </nav>  
         </div> 
     </header> 
 
     <section>
-        <div class="title title-fixed">
+        <div class="title">
             <div class="container">
                 <h1>Welcome to Portfolio</h1>
                 <p class="logo-text-size">I'm Anastasia, professional designer and painter</p>
@@ -70,28 +98,63 @@
 
     <section class="note">
       <div class="container">
-        <p>You never get a second chance<br> to make a good first impression</p>
+        <p>You never get a second chance<br>to make a good first impression</p>
       </div>
     </section>
 
     <section class="good-at">
-       <div class="container box">
+       <div class="container">
 			<div class="line-title">
                 <h2 class="name-title">&nbsp;MY&nbsp;SERVICE&nbsp;</h2>
 			</div>
-            <div class="skills clearfix">
+            <div class="skills">
                 <div>
-                    <img src="img/skill-icons/icon2.png" alt="Painting" title="Painting">
+                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="100px" height="95px" viewBox="0 0 550.002 550.001" style="enable-background:new 0 0 550.002 550.001;"
+                     xml:space="preserve">
+                        <polygon points="538.561,520.765 3.06,520.765 12.24,546.776 529.381,546.776         "/>
+                        <path d="M0,505.465h541.619V153.566h-5.324l-5.461,5.462l-10.82,10.82l0,0l-1.48,1.481l-42.432,42.43v237.856H65.518V207.413
+                            h296.658l53.846-53.847H303.543c-0.344-2.647-0.496-5.181-0.545-7.65c-0.049-2.65,0.09-5.187,0.355-7.65
+                            c5.816-53.657,83.859-64.499,107.23-111.788c8.713-17.625-17.678-33.137-26.422-15.444c-15.605,31.576-54.566,42.479-80.24,64.153
+                            c-18.871,15.934-28.908,39.122-30.731,63.079c-0.193,2.546-0.288,5.095-0.294,7.65c-0.009,2.552,0.067,5.104,0.245,7.65H0V505.465
+                            z"/>
+                        <polygon points="262.817,366.909 315.945,352.279 460.812,207.413 507.715,160.509 500.77,153.566 493.119,145.916 
+                            485.469,138.266 469.215,122.011 452.959,138.266 445.311,145.916 437.66,153.566 383.812,207.413 277.447,313.781      "/>
+                        <polygon points="511.5,79.725 481.516,109.71 510.068,138.266 517.719,145.916 520.014,148.211 522.309,145.916 529.959,138.266 
+                            550.002,118.226         "/>
+                    </svg>
                     <h4 class="skill-name">Painting</h4>
                     <p class="skill-desc">For creating picturesque works I use an popular graphical editor Adobe Photoshop, an standart set of implements like brush, paints, pencils and such surfaces as paper, canvas, glass.</p>
                 </div>
                <div>
-                    <img src="img/skill-icons/icon3.png" alt="Drawing" title="Drawing">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="100px" height="95px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                        <path d="M62.924,94.729c-1.732-1.274-1.918-3.188-1.918-3.188l-0.65-4.155H39.642l-0.652,4.152c0,0-0.181,1.916-1.914,3.19
+                            c-1.732,1.274-3.099,2.368-1.732,2.554c1.317,0.178,13.74,0.016,14.656,0c0.918,0.016,13.338,0.178,14.654,0
+                            C66.02,97.098,64.652,96.006,62.924,94.729z"/>
+                        <path d="M26.666,61.538c5.534-0.043,6.223-1.377,8.027-6.933c3.327-8.768,18.309,2.296,9.024,6.136
+                                C34.432,64.583,21.132,61.581,26.666,61.538z"/>
+                        <path d="M83.41,3.756c-2.688-2.164-7.135-1.098-9.938,2.38L45.082,46.472c-2.803,3.477-2.789,2.813-0.104,4.975
+                                c2.685,2.164,2.038,2.319,4.841-1.158l33.376-36.317C85.998,10.492,86.096,5.919,83.41,3.756z M76.109,8.584
+                                c0,0-0.416-0.483-1.799-1.589c2.074-3.387,6.15-2.766,6.15-2.766C76.596,6.511,76.109,8.584,76.109,8.584z"/>
+                        <path d="M96,17.386H83.516l-5.515,6h16v48h-88v-48h51.19l4.227-6H4c-2.209,0-4,1.791-4,4v58c0,2.209,1.791,4,4,4h92
+                            c2.209,0,4-1.791,4-4v-58C100,19.177,98.209,17.386,96,17.386z"/>
+                    </svg>
                     <h4 class="skill-name">Drawing</h4>
                     <p class="skill-desc">My main instrument for drawing is Adobe Photoshop. It lets me use natural drawing tools like pencils, pens, markers and watercolor brushes for creating great and amazing works.<p>
                </div>
                <div>
-                    <img src="img/skill-icons/icon1.png" alt="Creative design" title="Creative design">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="100px" height="95px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+                        <path d="M600.388,65.515c-7.707-7.883-16.913-11.945-28.193-11.945H40.138c-11.28,0-20.819,4.062-28.533,11.945
+                                C4.062,73.221,0,82.76,0,93.708v424.584c0,10.948,3.892,20.649,11.605,28.526c7.551,7.713,17.252,11.612,28.533,11.612h532.056
+                                c11.28,0,20.649-3.899,28.193-11.612C608.101,538.941,612,529.24,612,518.292V93.708C612,82.76,607.938,73.221,600.388,65.515z
+                                 M575.514,518.292c0,2.321-0.998,3.319-3.319,3.319H40.138c-2.328,0-3.319-0.998-3.319-3.319V93.708
+                                c0-2.321,0.991-3.319,3.319-3.319h532.056c2.321,0,3.319,0.998,3.319,3.319V518.292L575.514,518.292z"/>
+                        <path d="M438.187,269.842c17.578,0,31.844-14.592,31.844-32.177c0-16.913-14.266-31.179-31.844-31.179
+                                c-16.92,0-31.18,14.266-31.18,31.179C407.007,255.25,421.267,269.842,438.187,269.842z"/>
+                        <polygon points="344.309,380.3 209.968,199.855 88.23,448.964 71.982,485.79 537.363,485.79 411.649,321.926       "/>
+                    </svg>
                     <h4 class="skill-name">creative design</h4>
                     <p class="skill-desc">In my job I use Adobe Creative Suite - a graphic packet of various editors developed by Adobe Systems. Editors I'm working with are Illustrator, Photoshop, InDesign.<p>
                </div>
@@ -100,7 +163,7 @@
     </section>
 
     <section class="about-me">
-        <div class="container box">
+        <div class="container">
 						<div class="line-title">
             	           <h2 class="name-title">&nbsp;ABOUT&nbsp;ME&nbsp;</h2>
 						</div>
@@ -113,7 +176,7 @@
     </section>
 
     <section class="portfolio" id="page">
-        <div class="container box">
+        <div class="container">
 					<div class="line-title">
                         <h2 class="name-title">Portfolio</h2>
 					</div>
@@ -127,8 +190,18 @@
                         <div class="lb-overlay" id="image-1">
                             <img src="img/superbox/drawing/full/1.jpg" alt="image1" title="image1" />
                             <div>
-                                <a href="#image-8" title="Prev" class="lb-prev"><i class="icon-circle-left"></i></a>
-                                <a href="#image-2" title="Next" class="lb-next"><i class="icon-circle-right"></i></a>
+                                <a href="#image-8" title="Prev" class="lb-prev">   
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" fill="#003369"/>
+                                        <path d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z" fill="#003369"/>
+                                    </svg>
+                                </a>
+                                <a href="#image-2" title="Next" class="lb-next">                                  
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z" fill="#003369"/>
+                                        <path d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z" fill="#003369"/>
+                                    </svg>
+                                </a>
                             </div>
                             <a href="#page" title="Close" class="lb-close">Close</a>
                         </div>
@@ -139,10 +212,20 @@
 							<span></span>
                         </a>
                         <div class="lb-overlay" id="image-2">
-                            <img src="img/superbox/2d/full/9.jpg" alt="image2" title="image2"/>
+                            <img src="img/superbox/2d/superbox-full/9.jpg" alt="image2" title="image2"/>
                             <div>
-                                <a href="#image-1" title="Prev" class="lb-prev"><i class="icon-circle-left"></i></a>
-                                <a href="#image-3" title="Next" class="lb-next"><i class="icon-circle-right"></i></a>
+                                <a href="#image-1" title="Prev" class="lb-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" fill="#003369"/>
+                                        <path d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z" fill="#003369"/>
+                                    </svg>
+                                </a>
+                                <a href="#image-3" title="Next" class="lb-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z" fill="#003369"/>
+                                        <path d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z" fill="#003369"/>
+                                    </svg>
+                                </a>
                             </div>
                             <a href="#page" title="Close" class="lb-close">Close</a>
                         </div>
@@ -155,8 +238,18 @@
                         <div class="lb-overlay" id="image-3">
                             <img src="img/superbox/drawing/full/2.jpg" alt="image3" title="image3"/>
                             <div>
-                                <a href="#image-2" title="Prev" class="lb-prev"><i class="icon-circle-left"></i></a>
-                                <a href="#image-4" title="Next" class="lb-next"><i class="icon-circle-right"></i></a>
+                                <a href="#image-2" title="Prev" class="lb-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" fill="#003369"/>
+                                        <path d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z" fill="#003369"/>
+                                    </svg>
+                                </a>
+                                <a href="#image-4" title="Next" class="lb-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z" fill="#003369"/>
+                                        <path d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z" fill="#003369"/>
+                                    </svg>
+                                </a>
                             </div>
                             <a href="#page" title="Close" class="lb-close">Close</a>
                         </div>
@@ -167,10 +260,20 @@
 							<span></span>
                         </a>
                         <div class="lb-overlay" id="image-4">
-                            <img src="img/superbox/3d/full/2.jpg" alt="image4" title="image4"/>
+                            <img src="img/superbox/3d/superbox-full/2.jpg" alt="image4" title="image4"/>
                             <div>
-                                <a href="#image-3" title="Prev" class="lb-prev"><i class="icon-circle-left"></i></a>
-                                <a href="#image-5" title="Next" class="lb-next"><i class="icon-circle-right"></i></a>
+                                <a href="#image-3" title="Prev" class="lb-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" fill="#003369"/>
+                                        <path d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z" fill="#003369"/>
+                                    </svg>
+                                </a>
+                                <a href="#image-5" title="Next" class="lb-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z" fill="#003369"/>
+                                        <path d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z" fill="#003369"/>
+                                    </svg>
+                                </a>
                             </div>
                             <a href="#page" title="Close" class="lb-close">Close</a>
                         </div>
@@ -183,8 +286,18 @@
                         <div class="lb-overlay" id="image-5">
                             <img src="img/superbox/drawing/full/3.jpg" alt="image5" title="image5"/>
                             <div>
-                                <a href="#image-4" title="Prev" class="lb-prev"><i class="icon-circle-left"></i></a>
-                                <a href="#image-6" title="Next" class="lb-next"><i class="icon-circle-right"></i></a>
+                                <a href="#image-4" title="Prev" class="lb-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" fill="#003369"/>
+                                        <path d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z" fill="#003369"/>
+                                    </svg>
+                                </a>
+                                <a href="#image-6" title="Next" class="lb-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z" fill="#003369"/>
+                                        <path d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z" fill="#003369"/>
+                                    </svg>
+                                </a>
                             </div>
                             <a href="#page" title="Close" class="lb-close">Close</a>
                         </div>
@@ -195,10 +308,20 @@
 							<span></span>
                         </a>
                         <div class="lb-overlay" id="image-6">
-                            <img src="img/superbox/3d/full/1.jpg" alt="image6" title="image6" />
+                            <img src="img/superbox/3d/superbox-full/1.jpg" alt="image6" title="image6" />
                             <div>
-                                <a href="#image-5" title="Prev" class="lb-prev"><i class="icon-circle-left"></i></a>
-                                <a href="#image-7" title="Next" class="lb-next"><i class="icon-circle-right"></i></a>
+                                <a href="#image-5" title="Prev" class="lb-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" fill="#003369"/>
+                                        <path d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z" fill="#003369"/>
+                                    </svg>
+                                </a>
+                                <a href="#image-7" title="Next" class="lb-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z" fill="#003369"/>
+                                        <path d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z" fill="#003369"/>
+                                    </svg>
+                                </a>
                             </div>
                             <a href="#page" title="Close" class="lb-close">Close</a>
                         </div>
@@ -206,13 +329,23 @@
                     <li>
                         <a href="#image-7" title="image7">
                             <img src="img/portfolio/2d/thumb/2.jpg" alt="image7" title="image7">
-														<span></span>
+						    <span></span>
                         </a>
                         <div class="lb-overlay" id="image-7">
-                            <img src="img/superbox/2d/full/8.jpg" alt="image7" title="image7"/>
+                            <img src="img/superbox/2d/superbox-full/8.jpg" alt="image7" title="image7"/>
                             <div>
-                                <a href="#image-6" title="Prev" class="lb-prev"><i class="icon-circle-left"></i></a>
-                                <a href="#image-8" title="Next" class="lb-next"><i class="icon-circle-right"></i></a>
+                                <a href="#image-6" title="Prev" class="lb-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" fill="#003369"/>
+                                        <path d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z" fill="#003369"/>
+                                    </svg>
+                                </a>
+                                <a href="#image-8" title="Next" class="lb-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z" fill="#003369"/>
+                                        <path d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z" fill="#003369"/>
+                                    </svg>
+                                </a>
                             </div>
                             <a href="#page" title="Close" class="lb-close">Close</a>
                         </div>
@@ -225,8 +358,18 @@
                         <div class="lb-overlay" id="image-8">
                             <img src="img/superbox/drawing/full/5.jpg" alt="image8" title="image8"/>
                             <div>
-                                <a href="#image-7" title="Prev" class="lb-prev"><i class="icon-circle-left"></i></a>
-                                <a href="#image-1" title="Next" class="lb-next"><i class="icon-circle-right"></i></a>
+                                <a href="#image-7" title="Prev" class="lb-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="m64.5,122.6c32,0 58.1-26 58.1-58.1s-26-58-58.1-58-58,26-58,58 26,58.1 58,58.1zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z" fill="#003369"/>
+                                        <path d="m70,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2 1.6-1.6 1.6-4.2 0-5.8l-23.5-23.5 23.5-23.5c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-26.4,26.4c-0.8,0.8-1.2,1.8-1.2,2.9s0.4,2.1 1.2,2.9l26.4,26.4z" fill="#003369"/>
+                                    </svg>
+                                </a>
+                                <a href="#image-1" title="Next" class="lb-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129" width="34px" height="34px">
+                                        <path d="M64.5,122.6c32,0,58.1-26,58.1-58.1S96.5,6.4,64.5,6.4S6.4,32.5,6.4,64.5S32.5,122.6,64.5,122.6z M64.5,14.6    c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4S14.6,92,14.6,64.5S37,14.6,64.5,14.6z" fill="#003369"/>
+                                        <path d="m51.1,93.5c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l26.4-26.4c0.8-0.8 1.2-1.8 1.2-2.9 0-1.1-0.4-2.1-1.2-2.9l-26.4-26.4c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l23.5,23.5-23.5,23.5c-1.6,1.6-1.6,4.2 0,5.8z" fill="#003369"/>
+                                    </svg>
+                                </a>
                             </div>
                             <a href="#page" title="Close" class="lb-close">Close</a>
                         </div>
@@ -239,11 +382,11 @@
     </section>
 
     <section class="contacts first-form">
-        <div class="container box">
+        <div class="container">
             <div class="line-title">
                 <h2 class="name-title">let&prime;s get in touch!</h2>
             </div> 
-            <form action="" method="post" class="main-form clearfix">
+            <form action="action.php" method="post" class="main-form clearfix">
                 <div class="name-wrapper leftside">
                     <input type="text" name="name" placeholder="YOUR NAME" maxlength="20" class="form-name">
                 </div>
@@ -259,27 +402,62 @@
     </section>
 
     <footer>
-        <div class="container box">
+        <div class="container">
             <div class="links clearfix">
-                <a class="icon-facebook hover" href="" title="Facebook"></a>
-                <a class="icon-vk hover" href="" title="Vkontakte"></a>
-                <a class="icon-twitter hover" href="" title="Twitter"></a>
-                <a class="icon-google-plus hover" href="" title="Google+"></a>
+                <a class="facebook hover" href="#" title="Facebook">                   
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 49.652 49.652" style="enable-background:new 0 0 49.652 49.652;" xml:space="preserve">
+                        <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826    C49.652,11.137,38.516,0,24.826,0z M31,25.7h-4.039c0,6.453,0,14.396,0,14.396h-5.985c0,0,0-7.866,0-14.396h-2.845v-5.088h2.845    v-3.291c0-2.357,1.12-6.04,6.04-6.04l4.435,0.017v4.939c0,0-2.695,0-3.219,0c-0.524,0-1.269,0.262-1.269,1.386v2.99h4.56L31,25.7z"/>
+                    </svg>
+                </a>
+                <a class="vk hover" href="#" title="Vkontakte">                 
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 97.75 97.75" style="enable-background:new 0 0 97.75 97.75;" xml:space="preserve">
+                        <path d="M48.875,0C21.883,0,0,21.882,0,48.875S21.883,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.867,0,48.875,0z    M73.667,54.161c2.278,2.225,4.688,4.319,6.733,6.774c0.906,1.086,1.76,2.209,2.41,3.472c0.928,1.801,0.09,3.776-1.522,3.883   l-10.013-0.002c-2.586,0.214-4.644-0.829-6.379-2.597c-1.385-1.409-2.67-2.914-4.004-4.371c-0.545-0.598-1.119-1.161-1.803-1.604   c-1.365-0.888-2.551-0.616-3.333,0.81c-0.797,1.451-0.979,3.059-1.055,4.674c-0.109,2.361-0.821,2.978-3.19,3.089   c-5.062,0.237-9.865-0.531-14.329-3.083c-3.938-2.251-6.986-5.428-9.642-9.025c-5.172-7.012-9.133-14.708-12.692-22.625   c-0.801-1.783-0.215-2.737,1.752-2.774c3.268-0.063,6.536-0.055,9.804-0.003c1.33,0.021,2.21,0.782,2.721,2.037   c1.766,4.345,3.931,8.479,6.644,12.313c0.723,1.021,1.461,2.039,2.512,2.76c1.16,0.796,2.044,0.533,2.591-0.762   c0.35-0.823,0.501-1.703,0.577-2.585c0.26-3.021,0.291-6.041-0.159-9.05c-0.28-1.883-1.339-3.099-3.216-3.455   c-0.956-0.181-0.816-0.535-0.351-1.081c0.807-0.944,1.563-1.528,3.074-1.528l11.313-0.002c1.783,0.35,2.183,1.15,2.425,2.946   l0.01,12.572c-0.021,0.695,0.349,2.755,1.597,3.21c1,0.33,1.66-0.472,2.258-1.105c2.713-2.879,4.646-6.277,6.377-9.794   c0.764-1.551,1.423-3.156,2.063-4.764c0.476-1.189,1.216-1.774,2.558-1.754l10.894,0.013c0.321,0,0.647,0.003,0.965,0.058   c1.836,0.314,2.339,1.104,1.771,2.895c-0.894,2.814-2.631,5.158-4.329,7.508c-1.82,2.516-3.761,4.944-5.563,7.471   C71.48,50.992,71.611,52.155,73.667,54.161z"/>
+                    </svg>
+                </a>
+                <a class="twitter hover" href="#" title="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 486.392 486.392" style="enable-background:new 0 0 486.392 486.392;" xml:space="preserve" width="50px" height="50px">
+                        <path d="M243.196,0C108.891,0,0,108.891,0,243.196s108.891,243.196,243.196,243.196    s243.196-108.891,243.196-243.196C486.392,108.861,377.501,0,243.196,0z M364.186,188.598l0.182,7.752    c0,79.16-60.221,170.359-170.359,170.359c-33.804,0-65.268-9.91-91.776-26.904c4.682,0.547,9.454,0.851,14.288,0.851    c28.059,0,53.868-9.576,74.357-25.627c-26.204-0.486-48.305-17.814-55.935-41.586c3.678,0.699,7.387,1.034,11.278,1.034    c5.472,0,10.761-0.699,15.777-2.067c-27.39-5.533-48.031-29.7-48.031-58.701v-0.76c8.086,4.499,17.297,7.174,27.116,7.509    c-16.051-10.731-26.63-29.062-26.63-49.825c0-10.974,2.949-21.249,8.086-30.095c29.518,36.236,73.658,60.069,123.422,62.562    c-1.034-4.378-1.55-8.968-1.55-13.649c0-33.044,26.812-59.857,59.887-59.857c17.206,0,32.771,7.265,43.714,18.908    c13.619-2.706,26.448-7.691,38.03-14.531c-4.469,13.984-13.953,25.718-26.326,33.135c12.069-1.429,23.651-4.682,34.382-9.424    C386.073,169.659,375.889,180.208,364.186,188.598z"/>
+                    </svg>
+                </a>
+                <a class="google-plus hover" href="#" title="Google+">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 49.652 49.652" style="enable-background:new 0 0 49.652 49.652;" xml:space="preserve">
+                        <path d="M21.5,28.94c-0.161-0.107-0.326-0.223-0.499-0.34c-0.503-0.154-1.037-0.234-1.584-0.241h-0.066     c-2.514,0-4.718,1.521-4.718,3.257c0,1.89,1.889,3.367,4.299,3.367c3.179,0,4.79-1.098,4.79-3.258     c0-0.204-0.024-0.416-0.075-0.629C23.432,30.258,22.663,29.735,21.5,28.94z"/>
+                        <path d="M19.719,22.352c0.002,0,0.002,0,0.002,0c0.601,0,1.108-0.237,1.501-0.687c0.616-0.702,0.889-1.854,0.727-3.077     c-0.285-2.186-1.848-4.006-3.479-4.053l-0.065-0.002c-0.577,0-1.092,0.238-1.483,0.686c-0.607,0.693-0.864,1.791-0.705,3.012     c0.286,2.184,1.882,4.071,3.479,4.121H19.719L19.719,22.352z"/>
+                        <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826     C49.652,11.137,38.516,0,24.826,0z M21.964,36.915c-0.938,0.271-1.953,0.408-3.018,0.408c-1.186,0-2.326-0.136-3.389-0.405     c-2.057-0.519-3.577-1.503-4.287-2.771c-0.306-0.548-0.461-1.132-0.461-1.737c0-0.623,0.149-1.255,0.443-1.881     c1.127-2.402,4.098-4.018,7.389-4.018c0.033,0,0.064,0,0.094,0c-0.267-0.471-0.396-0.959-0.396-1.472     c0-0.255,0.034-0.515,0.102-0.78c-3.452-0.078-6.035-2.606-6.035-5.939c0-2.353,1.881-4.646,4.571-5.572     c0.805-0.278,1.626-0.42,2.433-0.42h7.382c0.251,0,0.474,0.163,0.552,0.402c0.078,0.238-0.008,0.5-0.211,0.647l-1.651,1.195     c-0.099,0.07-0.218,0.108-0.341,0.108H24.55c0.763,0.915,1.21,2.22,1.21,3.685c0,1.617-0.818,3.146-2.307,4.311     c-1.15,0.896-1.195,1.143-1.195,1.654c0.014,0.281,0.815,1.198,1.699,1.823c2.059,1.456,2.825,2.885,2.825,5.269     C26.781,33.913,24.89,36.065,21.964,36.915z M38.635,24.253c0,0.32-0.261,0.58-0.58,0.58H33.86v4.197     c0,0.32-0.261,0.58-0.578,0.58h-1.195c-0.322,0-0.582-0.26-0.582-0.58v-4.197h-4.192c-0.32,0-0.58-0.258-0.58-0.58V23.06     c0-0.32,0.26-0.582,0.58-0.582h4.192v-4.193c0-0.321,0.26-0.58,0.582-0.58h1.195c0.317,0,0.578,0.259,0.578,0.58v4.193h4.194     c0.319,0,0.58,0.26,0.58,0.58V24.253z"/>
+                    </svg>
+                </a>
             </div>
             <p>&copy; 2015 Copyright &ndash; All rights reserved</p>
         </div>
     </footer>
 </div>
 
-
 <div id="hellopreloader">
     <div id="hellopreloader_preload"></div>
 </div>
 
-<script src="js/preloader.js"></script>
-<script src="js/mobile-menu.js"></script>
-<script src="js/form.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+    $('.menu-trigger').click(function() {
+            $('#slide-menu').css(
+                    {
+                        'display' : '-webkit-flex',
+                        'display' : 'flex',
+                        '-webkit-flex-direction' : 'row',
+                        'flex-direction:' : 'row',
+                        '-webkit-align-items' : 'center',
+                        'align-items' : 'center',
+                        '-webkit-justify-content' : 'center',
+                        'justify-content' : 'center',
+                        'top' : '0'
+                    }
+                );
+        });
 
+        $('#slide-menu').find('.icon-close').click(function() {
+            $('#slide-menu').css({'top' :'-100%'});
+        });
+</script>
+<script src="js/preloader.js"></script>
+<script src="js/form.js"></script>
 </body>
 </html>
