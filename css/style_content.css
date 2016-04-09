@@ -4,7 +4,7 @@ nav#slide-menu {
 	top: -100%;
 	right: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background: #fff url('../img/snow.png');
 	-webkit-transition: top 400ms ease-in;
 	transition: top 400ms ease-in;
