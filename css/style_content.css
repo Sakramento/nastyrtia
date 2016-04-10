@@ -4,7 +4,7 @@ nav#slide-menu {
 	top: -100%;
 	right: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background: #fff url('../img/snow.png');
 	-webkit-transition: top 400ms ease-in;
 	transition: top 400ms ease-in;
@@ -87,12 +87,6 @@ div.menu-trigger span {
 div.menu-trigger:hover {
 	cursor: pointer;
 }
-
-body.menu-active nav#slide-menu { right: -100%; }
-body.menu-active nav#slide-menu ul { right: 0px; opacity: 1; }
-
-body.menu-active div#content { right: 40%; border-radius: 7px 0 0 7px; }
-body.menu-active div#content .menu-trigger { right: 1%; }
 
 /*оформление скрытого меню*/
 #slide-menu {
@@ -1377,6 +1371,7 @@ a.btn:active,
 nav#slide-menu {
 	display: block;
 	width: 100%;
+	height: 100%;
 }
 
 div.menu-trigger {
@@ -1879,6 +1874,7 @@ div.menu-trigger span {
 
 nav#slide-menu {
 	width: 100%;
+	height: 100%	
 }
 
 .name-title {
