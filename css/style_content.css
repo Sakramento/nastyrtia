@@ -210,7 +210,6 @@ body.menu-active div#content .menu-trigger { right: 1%; }
 }
 
 .logo-size {
-	float: left;
 	color :#193667;
 	font-size: 3.25em;
 	font-family: "santelia_scriptbold_dmo", "Arial Bold", sans-serif;
@@ -238,7 +237,7 @@ header nav {
   	box-sizing: border-box;
 	float:left;
 	margin-right: 20px;
-	font-family: "latoregular", sans-serif;
+	font-family: "latoregular", "Arial", sans-serif;
 	padding: 10px 10px 10px 10px;
 	position: relative;
 	-webkit-transition: all 0.3s;
@@ -386,12 +385,12 @@ section div.container > p {
 
 /*первый блок*/
 .journey {
-	width:100%;
+	width: 100%;
 	text-align: center;
 }
 
 .journey p {
-	font-family: "latolight",sans-serif;
+	font-family: "latolight", "Arial", sans-serif;
 	font-size: 26px;
 	margin-bottom:25px;
 }
@@ -403,7 +402,7 @@ section div.container > p {
 	
 	background: #fff;
 
-	font-family: "latosemibold",sans-serif;
+	font-family: "latosemibold", "Arial Bold", sans-serif;
 	font-size: 36px;
 	text-transform: uppercase;
 	color: #193667;
@@ -429,7 +428,8 @@ section div.container > p {
 .note p {
 	position: relative;
 	color: #193667;
-	font: 3.25em "santelia_scriptbold_dmo", sans-serif;
+	font-family: "santelia_scriptbold_dmo", "Arial Bold", sans-serif;
+	font-size: 3.25em;
 }
 
 /*блок с навыками*/
@@ -438,15 +438,17 @@ section div.container > p {
 }
 
 .skill-name {
-	font: 26px "latosemibold",sans-serif;
-	color:#193667;
+	font-family: "latosemibold", "Arial Bold", sans-serif;
+	font-size: 26px;
+	color: #193667;
 	text-transform: uppercase;
 	padding: 35px 0px;
 }
 
 .skill-desc {
-	font:24px "latolight", sans-serif;
-	color:#193667;
+	font-family: "latolight", "Arial", sans-serif;
+	font-size: 24px;
+	color: #193667;
 	text-align: center;
 	padding-bottom: 40px;
 }
@@ -506,7 +508,7 @@ section div.container > p {
 
 .about-me p {
 	margin: 40px 0;
-	font-family: "latolight",sans-serif;
+	font-family: "latolight", "Arial", sans-serif;
 	font-size: 26px;
 	line-height: 1.4em;
 	color: #193667;
@@ -517,7 +519,7 @@ section div.container > p {
 	display: inline-block;
 	padding: 15px 40px;
 	background: transparent;
-	font-family: "latoregular", sans-serif;
+	font-family: "latoregular", "Arial", sans-serif;
 	font-size: 24px;
 	border: 3px solid #193667;
 	color: #193667;
@@ -587,7 +589,7 @@ section div.container > p {
 }
 
 .contacts .form-title {
-	font-family: "latosemibold", sans-serif;
+	font-family: "latosemibold", "Arial Bold", sans-serif;
 	font-size:36px;
 	text-transform: uppercase;
 	color: #fff;
@@ -604,11 +606,10 @@ section div.container > p {
 .contacts form input {
 	display: block;
 	width: 100%;
-	padding: 20px 0px;
-	font-family: "latosemibold",sans-serif;
+	padding: 18px 0px;
+	font-family: "latosemibold", "Arial Bold", sans-serif;
 	font-size:  24px;
 	color: #ADABAC;
-
 	outline: none;
 	border: none;
 	background: transparent;
@@ -623,6 +624,9 @@ section div.container > p {
 
 .contacts .name-wrapper,
 .contacts .mail-wrapper {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	padding: 0px 15px 0px 15px;
 	border: 3px solid  #193667;
 
@@ -632,26 +636,23 @@ section div.container > p {
 
 .leftside {
 	float: left;
-	width: 45%;
+	width: 48.7413467589679%; /*774,5px : 1589px*/
 }
 
 .rightside {
 	float: right;
-	width: 45%;
+	width: 48.7413467589679%; /*774,5px : 1589px*/;
 }
 
 .contacts textarea {
 	display: block;
-	width:100%;
-	height:300px;
-
+	width: 100%;
+	height: 280px;
 	margin: 0;
 	padding: 0;
-
-	font-family: "latosemibold",sans-serif;
+	font-family: "latosemibold", "Arial Bold", sans-serif;
 	font-size: 24px;
 	color: #ADABAC;
-
 	resize: none;
 	border: none;
 	background: transparent;
@@ -664,7 +665,7 @@ section div.container > p {
 	border: 3px solid #193667;
 	padding: 15px 40px;
 	background: transparent;
-	font-family: "Lato Regular", sans-serif;
+	font-family: "Lato Regular", "Arial", sans-serif;
 	font-size: 24px;
 	color: #193667;
 	-webkit-transition: all 0.3s;
@@ -692,7 +693,7 @@ section div.container > p {
 }
 
 .first-form .textarea-wrapper {
-	margin-top: 140px;
+	margin-top: 115px;
 }
 
 ::-webkit-input-placeholder {color:#ADABAC;}
@@ -763,7 +764,7 @@ section div.container > p {
 
 .form-wrapper .name-wrapper,
 .form-wrapper .mail-wrapper {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .contact-details {
@@ -780,15 +781,20 @@ section div.container > p {
 .contact-details span {
 	display: inline-block;
 	vertical-align: middle;
-	padding-left: 25px;
-	font: 24px "Lato Light", sans-serif;
-	color:#193667;
+	font-family: "Lato Light", "Arial", sans-serif;
+	font-size: 24px;
+	color: #193667;
 	text-align: center;
 }
 
+.contact-details svg {
+	padding-right: 25px;
+}
+
 .contact-details h4 {
-	font: 26px "latosemibold",sans-serif;
-	color:#193667;
+	font-family: "latosemibold", "Arial Bold", sans-serif;
+	font-size: 26px;
+	color: #193667;
 	text-transform: uppercase;
 	padding-bottom: 40px;
 	text-align: left;
@@ -808,7 +814,7 @@ section div.container > p {
 
 /*подвал*/
 footer p {
-	font-family: "latosemibold",sans-serif;
+	font-family: "latosemibold", "Arial Bold", sans-serif;
 	font-size: 24.05px;
 	color: #193667;
 }
@@ -1796,9 +1802,12 @@ body .container {
 	margin-top: 0px;
 }
 
-.contacts form input,
-.contacts textarea {
+.contacts form input {
 	padding: 14px 0;
+	font-size: 1em;
+}
+
+.contacts textarea {
 	font-size: 1em;
 }
 
@@ -1814,6 +1823,31 @@ body .container {
 
 .contacts.first-form .container {
 	width: 90%;
+}
+
+/*стилизуем форму через js*/
+.contacts .input-invalid {
+	background: #fff url('../img/invalid.svg') no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535;
+}
+
+.contacts .input-valid {
+	background: #fff url('../img/valid.svg') no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+
+.textarea-valid {
+	background: #fff url('../img/valid.svg') no-repeat 99% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+
+.textarea-invalid {
+	background: #fff url('../img/invalid.svg') no-repeat 99% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535;	
 }
 
 
@@ -2085,14 +2119,17 @@ section div.container > p {
 }
 
 /*формы*/
-.contacts form input,
-.contacts textarea {
-	padding: 14px 0;
+.contacts form input {
+	padding: 12px 0;
 	font-size: 1em;
 }
 
 .contacts textarea {
-	height: 160px;
+	font-size: 1em;
+}
+
+.contacts textarea {
+	height: 140px;
 }
 
 .contacts .name-wrapper,
@@ -2102,7 +2139,7 @@ section div.container > p {
 
 .textarea-wrapper {
     border: 2px solid #193667;
-    padding: 14px 15px;
+    padding: 12px 15px;
 }
 
 .contacts.first-form .container {
@@ -2207,6 +2244,31 @@ footer p {
 	height: 180px;
 }
 
+/*стилизуем форму через js*/
+.contacts .input-invalid {
+	background: #fff url('../img/invalid.svg') no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535;
+}
+
+.contacts .input-valid {
+	background: #fff url('../img/valid.svg') no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+
+.textarea-valid {
+	background: #fff url('../img/valid.svg') no-repeat 99% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+
+.textarea-invalid {
+	background: #fff url('../img/invalid.svg') no-repeat 99% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535;	
+}
+
 
 }
 
@@ -2272,6 +2334,31 @@ a.logo-size {
 
 .contacts.first-form .container {
 	width: 90%;
+}
+
+/*стилизуем форму через js*/
+.contacts .input-invalid {
+	background: #fff url('../img/invalid.svg') no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535;
+}
+
+.contacts .input-valid {
+	background: #fff url('../img/valid.svg') no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+
+.textarea-valid {
+	background: #fff url('../img/valid.svg') no-repeat 99% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+
+.textarea-invalid {
+	background: #fff url('../img/invalid.svg') no-repeat 99% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535;	
 }
 
 }
