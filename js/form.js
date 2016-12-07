@@ -1,152 +1,89 @@
-var section = document.querySelector(".contacts");
-var form = section.querySelector(".main-form");
+$(document).ready(function() {
+	var $form = $('.form__inner'),
+			inputName = $form.find('.form__input--name'),
+      inputEmail = $form.find('.form__input--email'),
+      formTextarea = $form.find('.form__textarea'),
+      $popup = $('.popup'),
+      $btnPopupClose = $('.popup__btn'),
+      regExp = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i,
+      inputNameError = true,
+      inputEmailError = true,
+      formTextareaError = true;
 
-var inputName = form.querySelector(".form-name");
-var inputMail = form.querySelector(".form-mail");
-var wrapperName = form.querySelector(".name-wrapper");
-var wrapperMail = form.querySelector(".mail-wrapper");
-var text = form.querySelector(".form-text");
-var wrapper = form.querySelector(".textarea-wrapper");
+  /*------validation for email field------*/
+  inputEmail.on('keyup', function() {
+    if (!regExp.test(inputEmail.val()) || inputEmail.val() == '') {
+      inputEmail.addClass('form__input--invalid');
+      inputEmail.removeClass('form__input--valid');
+      inputEmailError = true;
+    } else {
+      inputEmail.addClass('form__input--valid');
+      inputEmail.removeClass('form__input--invalid');
+      inputEmailError = false;
+    }
+  });
 
-var r = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;
+  /*------validation for name field------*/
+  inputName.on('keyup', function() {
+    if (inputName.val() == '') {
+      inputName.addClass('form__input--invalid');
+      inputName.removeClass('form__input--valid');
+      inputNameError = true;
+    } else {
+      inputName.addClass('form__input--valid');
+      inputName.removeClass('form__input--invalid');
+      inputNameError = false;
+    }
+  });
 
-window.localStorage.clear();
+  /*------validation for textarea field------*/
+  formTextarea.on('keyup', function() {
+    if (formTextarea.val() == '') {
+      formTextarea.addClass('form__input--invalid');
+      formTextarea.removeClass('form__input--valid');
+      formTextareaError = true;
+    } else {
+      formTextarea.addClass('form__input--valid');
+      formTextarea.removeClass('form__input--invalid');
+      formTextareaError = false;
+    }
+  });
 
-/*скрипт на валидацию поля e-mail*/
-inputMail.addEventListener("input", function(event){
-	if (!r.test(inputMail.value)) {
-		if (wrapperMail.classList.contains("input-valid")){
-			event.preventDefault();
-			wrapperMail.classList.remove("input-valid");
-			wrapperMail.classList.add("input-invalid");
-		}
-	}
-	else if (r.test(inputMail.value)) {
-		if (wrapperMail.classList.contains("input-invalid")){
-			event.preventDefault();
-			wrapperMail.classList.remove("input-invalid");
-			wrapperMail.classList.add("input-valid");
-		}
-	}
+  /*------form submit------*/
+  $form.on('submit', function(event) {
+    event.preventDefault();
+
+    if (inputNameError || inputEmailError || formTextareaError) {
+      if ($form.hasClass('form__inner--error')) {
+        $form.removeClass('form__inner--error');
+        setTimeout(function() {
+          $form.addClass('form__inner--error');
+        }, 100);
+      } else {
+        $form.addClass('form__inner--error');
+      }
+    } else {
+      $form.removeClass('form__inner--error');
+
+      inputName.val('');
+      inputEmail.val('');
+      formTextarea.val('');
+
+      inputNameError = true;
+      inputEmailError = true;
+      formTextareaError = true;
+
+      inputName.removeClass('form__input--valid').removeClass('.form__input--invalid');
+      inputEmail.removeClass('form__input--valid').removeClass('.form__input--invalid');
+      formTextarea.removeClass('form__input--valid').removeClass('.form__input--invalid');
+
+      $popup.addClass('popup--active');
+    }
+  });
+
+  /*------close popup eventHandler------*/
+  $btnPopupClose.on('click', function() {
+    $popup.removeClass('popup--active');
+  });
+
 });
-
-
-inputMail.addEventListener("focus", function(event){
-	if (!inputMail.value || !r.test(inputMail.value)){
-		event.preventDefault();
-		wrapperMail.classList.add("input-invalid");
-	}
-	else {
-		event.preventDefault();
-		wrapperMail.classList.add("input-valid");
-	}
-});
-
-inputMail.addEventListener("focusout", function(event){
-	if (wrapperMail.classList.contains("input-valid")){
-		event.preventDefault();
-		wrapperMail.classList.remove("input-valid");
-	}
-	else if (wrapperMail.classList.contains("input-invalid")){
-		event.preventDefault();
-		wrapperMail.classList.remove("input-invalid");
-	}
-});
-
-
-/*скрипт на валидацию поля имени*/
-inputName.addEventListener("focus", function(event){
-	if (!inputName.value) {
-		event.preventDefault();
-		wrapperName.classList.add("input-invalid");
-	}
-	else {
-		event.preventDefault();
-		wrapperName.classList.add("input-valid");
-	}
-});
-
-inputName.addEventListener("input", function(event){
-	if (inputName.value){
-		if(wrapperName.classList.contains("input-invalid")){
-			event.preventDefault();
-			wrapperName.classList.remove("input-invalid");
-			wrapperName.classList.add("input-valid");
-		}
-	}
-	else if (!inputName.value){
-		if (wrapperName.classList.contains("input-valid")){
-			event.preventDefault();
-			wrapperName.classList.remove("input-valid");
-			wrapperName.classList.add("input-invalid");
-		}
-	}
-});
-
-inputName.addEventListener("focusout", function(event){
-	if (wrapperName.classList.contains("input-valid")){
-		event.preventDefault();
-		wrapperName.classList.remove("input-valid");
-	}
-	else if(wrapperName.classList.contains("input-invalid")){
-		event.preventDefault();
-		wrapperName.classList.remove("input-invalid");
-	}
-});
-
-/*скрипт на валидацию текстовой области под сообщение*/
-text.addEventListener("focus", function(event){
-	if (!text.value) {
-		event.preventDefault();
-		wrapper.classList.add("textarea-invalid");
-	}
-	else
-	{
-		event.preventDefault();
-		wrapper.classList.add("textarea-valid");
-	}
-});
-
-text.addEventListener ("input", function(event){
-	if (text.value) {
-		if (wrapper.classList.contains("textarea-invalid")){
-				event.preventDefault();
-				wrapper.classList.remove("textarea-invalid");
-				wrapper.classList.add("textarea-valid");
-		}
-	}
-	else if(!text.value){
-		if (wrapper.classList.contains("textarea-valid")){
-			event.preventDefault();
-			wrapper.classList.remove("textarea-valid");
-			wrapper.classList.add("textarea-invalid");
-		}
-	}
-});
-
-text.addEventListener("focusout", function(event){
-	if (wrapper.classList.contains("textarea-valid")) {
-		event.preventDefault();
-		wrapper.classList.remove("textarea-valid");
-	}
-	else if (wrapper.classList.contains("textarea-invalid")) {
-		event.preventDefault();
-		wrapper.classList.remove("textarea-invalid");
-	}
-});
-
-/*скрипт на валидацию отправки формы*/
-form.addEventListener("submit", function(event){
-	if (!inputName.value || !inputMail.value || !text.value || !r.test(inputMail.value)) {
-		event.preventDefault();
-		form.classList.toggle("form-error");
-	}
-});
-
-form.addEventListener("webkitAnimationEnd", function(event){
-	if(form.classList.contains("form-error")) {
-		event.preventDefault();
-		form.classList.remove("form-error");
-	}
-});
-
